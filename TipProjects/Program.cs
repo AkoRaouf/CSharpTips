@@ -1,4 +1,7 @@
-﻿using CShapAdvancedTips.Struct._3;
+﻿using CShapAdvancedTips.Class;
+using CShapAdvancedTips.Class.Projection;
+using CShapAdvancedTips.Exceptions;
+using CShapAdvancedTips.Struct._3;
 using System;
 using System.Diagnostics;
 
@@ -8,8 +11,8 @@ namespace ConsoleForTest
     {
         static void Main(string[] args)
         {
-            var testStrcut3 = new TestStrcut3();
-            testStrcut3.Test();
+            var test = new ProjectionTest();
+            test.Test();
         }
     }
 }
