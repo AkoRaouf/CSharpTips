@@ -49,5 +49,12 @@ namespace CShapAdvancedTips.Context
             var text = _httpClient.GetStringAsync("http://time.com/currentTime");
             btn.Contect = text;
         }
+
+        public void DownloadAndUpdateTheButtonTextUsingAwaitAsyncContextFalse()
+        {
+            var text = _httpClient.GetStringAsync("http://time.com/currentTime")
+                       .ConfigureAwait(false);
+            btn.Contect = text;
+        }
     }
 }
