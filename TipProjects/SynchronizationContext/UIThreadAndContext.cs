@@ -41,7 +41,8 @@ namespace CShapAdvancedTips.Context
         }
 
         /// <summary>
-        /// This approach will use pure Await and Async;
+        /// This approach will use pure Await and Async, by default the 
+        /// the async/await capture current context;
         /// </summary>
         public void DownloadAndUpdateTheButtonTextUsingAwaitAsync()
         {
