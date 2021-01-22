@@ -22,6 +22,9 @@ namespace CShapAdvancedTips.Context
                 }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
+        /// <summary>
+        /// Using the SynchronizationContext post method. 
+        /// </summary>
         public void DownloadAndUpdateTheButtonTextDirectSc()
         {
             SynchronizationContext sc = SynchronizationContext.Current;
@@ -35,6 +38,15 @@ namespace CShapAdvancedTips.Context
                         btn.Contect = downlaodTask.Result;
                     }, null);
                 });
+        }
+
+        /// <summary>
+        /// This approach will use pure Await and Async;
+        /// </summary>
+        public void DownloadAndUpdateTheButtonTextUsingAwaitAsync()
+        {
+            var text = _httpClient.GetStringAsync("http://time.com/currentTime");
+            btn.Contect = text;
         }
     }
 }
