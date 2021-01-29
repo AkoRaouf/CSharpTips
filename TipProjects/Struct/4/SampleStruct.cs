@@ -24,6 +24,5 @@ namespace CShapAdvancedTips.Struct._4
             var sampleStruct = new SampleStruct() { Value = 50 };
             Console.WriteLine(sampleStruct.Value == 50);
         }
-       
     }
 }
